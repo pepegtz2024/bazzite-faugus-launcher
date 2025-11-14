@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ouex pipefail
+#set -ouex pipefail
 
 ### Install packages
 
@@ -9,8 +9,10 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+dnf5 -y copr enable faugus/faugus-launcher
+
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 install -y faugus-launcher
 
 # Use a COPR Example:
 #
@@ -21,4 +23,4 @@ dnf5 install -y tmux
 
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
+"systemctl enable podman.socket
