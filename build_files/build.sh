@@ -2,6 +2,6 @@
 
 set -ouex pipefail
 
-source ./copr-repos.sh
-source ./packages.sh
-source ./copr-disable.sh
+source /ctx/copr-repos.sh
+source /ctx/packages.sh
+source /ctx/copr-disable.sh
